@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lists xmlns="http://labkey.org/list/xml">
+  <list name="LocalDetectorType" id="32" entireListIndex="true" entireListIndexSetting="2"/>
+  <list name="Platform" id="11" entireListIndex="true" entireListIndexSetting="2"/>
+  <list name="DataSet" id="24" entireListIndex="true" entireListIndexSetting="2"/>
+  <list name="DataAcquisitionType" id="31" entireListIndex="true" entireListIndexSetting="2"/>
+  <list name="SensingPerspectiveType" id="57" entireListIndex="true" entireListIndexSetting="2"/>
+  <list name="InstrumentType" id="13" entireListIndex="true" entireListIndexSetting="2"/>
+  <list name="Deployment" id="28" entireListIndex="true" entireListIndexSetting="2"/>
+  <list name="Unit" id="21" entireListIndex="true" entireListIndexSetting="2"/>
+  <list name="LocalPlatformType" id="33" entireListIndex="true" entireListIndexSetting="2"/>
+  <list name="ObjectType" id="29" entireListIndex="true" entireListIndexSetting="2"/>
+  <list name="IndicatorType" id="63" entireListIndex="true" entireListIndexSetting="2"/>
+  <list name="AttributeType" id="43" entireListIndex="true" entireListIndexSetting="2"/>
+  <list name="LocalMethodType" id="46" entireListIndex="true" entireListIndexSetting="2"/>
+  <list name="LocalScaleType" id="62" entireListIndex="true" entireListIndexSetting="2"/>
+  <list name="LocalInstrumentPerspectiveType" id="58" entireListIndex="true" entireListIndexSetting="2"/>
+  <list name="LocalSensingPerspectiveType" id="59" entireListIndex="true" entireListIndexSetting="2"/>
+  <list name="Study" id="2" entireListIndex="true" entireListIndexSetting="2"/>
+  <list name="Agent" id="22" entireListIndex="true" entireListIndexSetting="2"/>
+  <list name="DataAcquisition" id="36" entireListIndex="true" entireListIndexSetting="2"/>
+  <list name="StudyType" id="27" entireListIndex="true" entireListIndexSetting="2"/>
+  <list name="Sample" id="44" entireListIndex="true" entireListIndexSetting="2"/>
+  <list name="AttributeReference" id="25" entireListIndex="true" entireListIndexSetting="2"/>
+  <list name="LocalObjectType" id="53" entireListIndex="true" entireListIndexSetting="2"/>
+  <list name="LocalInstrumentType" id="37" entireListIndex="true" entireListIndexSetting="2"/>
+  <list name="Method" id="45" entireListIndex="true" entireListIndexSetting="2"/>
+  <list name="Subject" id="38" entireListIndex="true" entireListIndexSetting="2"/>
+  <list name="LocalStudyIndicatorType" id="60" entireListIndex="true" entireListIndexSetting="2"/>
+  <list name="AgentType" id="47" entireListIndex="true" entireListIndexSetting="2"/>
+  <list name="LocalSampleType" id="41" entireListIndex="true" entireListIndexSetting="2"/>
+  <list name="Project" id="3" entireListIndex="true" entireListIndexSetting="2"/>
+  <list name="DetectorType" id="14" entireListIndex="true" entireListIndexSetting="2"/>
+  <list name="DASchemaAttribute" id="52" entireListIndex="true" entireListIndexSetting="2"/>
+  <list name="Detector" id="16" entireListIndex="true" entireListIndexSetting="2"/>
+  <list name="Cohort" id="39" entireListIndex="true" entireListIndexSetting="2"/>
+  <list name="LocalAnalyteType" id="48" discussions="2" eachItemIndex="true" entireListIndexSetting="2"/>
+  <list name="DASchema" id="51" entireListIndex="true" entireListIndexSetting="2"/>
+  <list name="LocalProcessType" id="55" entireListIndex="true" entireListIndexSetting="2"/>
+  <list name="Instrument" id="23" entireListIndex="true" entireListIndexSetting="2"/>
+  <list name="LocalAttributeType" id="54" entireListIndex="true" entireListIndexSetting="2"/>
+  <list name="ModelType" id="42" entireListIndex="true" entireListIndexSetting="2"/>
+  <list name="PossibleValue" id="26" entireListIndex="true" entireListIndexSetting="2"/>
+  <list name="PlatformType" id="12" entireListIndex="true" entireListIndexSetting="2"/>
+  <list name="SampleType" id="30" entireListIndex="true" entireListIndexSetting="2"/>
+</lists>

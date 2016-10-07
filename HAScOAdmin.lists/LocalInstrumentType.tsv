@@ -1,0 +1,1 @@
+hasURI	rdfs:subClassOf	rdfs:label	rdfs:comment	hasneto:hasMaker	hasneto:hasImage	vstoi:numAttachedDetectors	vstoi:maxDetachableDetectors	vstoi:maxLoggedMeasurements	vstoi:minOperatingTemperature	vstoi:maxOperatingTemperature	hasneto:hasOperatingTemperatureUnit	vstoi:hasWebDocumentation	prov:wasGeneratedBy	skos:editorialNote	hasco:needsApproval	hasco:approvedBy

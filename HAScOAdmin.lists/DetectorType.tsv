@@ -1,0 +1,36 @@
+hasURI	rdfs:subClassOf	rdfs:label	rdfs:comment	hasneto:hasMaker	hasneto:hasImage	vstoi:hasWebDocumentation
+hadatac-sn:AcousticDetector	vstoi:Detector	Ultrasound Detector				
+hadatac-sn:CampbellThermistor	hadatac-sn:ResistanceTemperatureDetector	Campbell Measurement Specialties 100K6A1iA thermistor				
+hadatac-sn:CapacitiveDetector	vstoi:Detector	Capacitive Detector				
+hadatac-sn:ElectrodeConductivityDetector	vstoi:Detector	Electrode Potential Detector				
+hadatac-sn:ElectrodePotentialDetector	hadatac-sn:PotentialDetector	Electrode Potential Detector				
+hadatac-sn:EXO2_Chloride	hadatac-sn:SolidStateMembranePotentialDetector	YSI 599711				
+hadatac-sn:EXO2_Conductivity_Temp	hadatac-sn:ElectrodeConductivityDetector	YSI 599870-01				
+hadatac-sn:EXO2_Depth	vstoi:Detector	EXO2 Built-In Depth Sensor				
+hadatac-sn:EXO2_Dissolved_Oxigen	vstoi:ImagingDetector	YSI 599100-01				
+hadatac-sn:EXO2_fDOM	vstoi:ImagingDetector	YSI 599104-01				
+hadatac-sn:EXO2_pH_ORP	hadatac-sn:ElectrodePotentialDetector	YSI 599705				
+hadatac-sn:EXO2_Turbidity	vstoi:ImagingDetector	EXO Turbidity Smart Sensor				
+hadatac-sn:H3123Transducer	hadatac-sn:PressureDetector	H3123 Submersible Pressure Transducer				
+hadatac-sn:Hygrometer	vstoi:Detector	Hygrometer				
+hadatac-sn:IN1-Hygrometer	hadatac-sn:Hygrometer	ROTRONIC Hygromer IN1				
+hadatac-sn:PhotovoltaicDetector	vstoi:Detector	Photovoltaic Detector				
+hadatac-sn:PotentialDetector	vstoi:Detector	Potential Detector				
+hadatac-sn:PressureDetector	vstoi:Detector	Pressure Detector				
+hadatac-sn:PT100-RTD	hadatac-sn:ResistanceTemperatureDetector	PT100 RTD				
+hadatac-sn:ResistanceTemperatureDetector	vstoi:Detector	Resistance Temperature Detector				
+hadatac-sn:SiliconPhotovoltaicDetector	hadatac-sn:PhotovoltaicDetector	Silicon Photovoltaic Detector				
+hadatac-sn:SolidStateMembranePotentialDetector	hadatac-sn:PotentialDetector	Solid State Membrane Potential Detector				
+hadatac-sn:SonTekIQ-AccousticBinSizeMeter	hadatac-sn:AcousticDetector	SonTek Acoustic Doppler Velocity Meter for Bin Size				
+hadatac-sn:SonTekIQ-AccousticVelocityMeter	hadatac-sn:AcousticDetector	SonTek Acoustic Doppler Velocity Meter				
+hadatac-sn:TippingPointSyphon	vstoi:Detector	Tipping Point Syphon				
+hadatac-sn:VaisalaBAROCAP	hadatac-sn:CapacitiveDetector	Vaisala BAROCAP Sensor				
+hadatac-sn:VaisalaHUMICAP180	hadatac-sn:CapacitiveDetector	Vaisala HUMICAP 180 Sensor				
+hadatac-sn:VaisalaRAINCAP	hadatac-sn:AcousticDetector	Vaisala RAINCAP Sensor				
+hadatac-sn:VaisalaTHERMOCAP	hadatac-sn:CapacitiveDetector	Vaisala THERMOCAP Sensor				
+hadatac-sn:VaisalaWINDCAP	hadatac-sn:AcousticDetector	Vaisala WINDCAP Transducer Set				
+vstoi:CCD	vstoi:ImagingDetector	CCD Imaging Detector				
+vstoi:Detector	sio:Device	Detector				
+vstoi:Film	vstoi:ImagingDetector	Film				
+vstoi:ImagingDetector	vstoi:Detector	Imaging Detector				
+vstoi:Thermometer	vstoi:Detector	Thermometer				

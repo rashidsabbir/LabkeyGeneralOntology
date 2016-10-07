@@ -1,0 +1,2588 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Exported from LabKey Server at http://chear.tw.rpi.edu/labkey/HAScO%20Admin/project-begin.view by rashidsabbir on Fri Oct 07 17:04:11 EDT 2016-->
+<tables xmlns="http://labkey.org/data/xml">
+  <table tableName="LocalDetectorType" tableDbType="TABLE">
+    <description>Local Ontology</description>
+    <columns>
+      <column columnName="hasURI">
+        <datatype>varchar</datatype>
+        <columnTitle>hasURI</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <nullable>false</nullable>
+        <scale>4000</scale>
+        <isKeyField>true</isKeyField>
+      </column>
+      <column columnName="rdfs:subClassOf">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:subClassOf</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="rdfs:label">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:label</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="rdfs:comment">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:comment</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasneto:hasMaker">
+        <datatype>varchar</datatype>
+        <columnTitle>hasneto:hasMaker</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasneto:hasImage">
+        <datatype>varchar</datatype>
+        <columnTitle>hasneto:hasImage</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="vstoi:hasWebDocumentation">
+        <datatype>varchar</datatype>
+        <columnTitle>vstoi:hasWebDocumentation</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="prov:wasGeneratedBy">
+        <datatype>varchar</datatype>
+        <columnTitle>prov:wasGeneratedBy</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="skos:editorialNote">
+        <datatype>varchar</datatype>
+        <columnTitle>skos:editorialNote</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasco:needsApproval">
+        <datatype>boolean</datatype>
+        <columnTitle>hasco:needsApproval</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#boolean</rangeURI>
+      </column>
+      <column columnName="hasco:ApprovedBy">
+        <datatype>varchar</datatype>
+        <columnTitle>hasco:ApprovedBy</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <fk>
+          <fkDbSchema>lists</fkDbSchema>
+          <fkTable>Agent</fkTable>
+          <fkColumnName>hasURI</fkColumnName>
+        </fk>
+        <scale>4000</scale>
+      </column>
+    </columns>
+    <pkColumnName>hasURI</pkColumnName>
+  </table>
+  <table tableName="Platform" tableDbType="TABLE">
+    <columns>
+      <column columnName="hasURI">
+        <datatype>varchar</datatype>
+        <columnTitle>Has URI</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <nullable>false</nullable>
+        <scale>4000</scale>
+        <isKeyField>true</isKeyField>
+      </column>
+      <column columnName="a">
+        <datatype>varchar</datatype>
+        <columnTitle>A</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <fk>
+          <fkDbSchema>lists</fkDbSchema>
+          <fkTable>PlatformType</fkTable>
+          <fkColumnName>hasURI</fkColumnName>
+        </fk>
+        <scale>4000</scale>
+      </column>
+      <column columnName="rdfs:label">
+        <datatype>varchar</datatype>
+        <columnTitle>Rdfs:label</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="vstoi:hasSerialNumber">
+        <datatype>varchar</datatype>
+        <columnTitle>Vstoi:has Serial Number</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasneto:hasFirstCoordinate">
+        <datatype>varchar</datatype>
+        <columnTitle>Hasneto:has First Coordinate</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasneto:hasFirstCoordinateUnit">
+        <datatype>varchar</datatype>
+        <columnTitle>Hasneto:has First Coordinate Unit</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <fk>
+          <fkDbSchema>lists</fkDbSchema>
+          <fkTable>Unit</fkTable>
+          <fkColumnName>hasURI</fkColumnName>
+        </fk>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasneto:hasFirstCoordinateCharacteristic">
+        <datatype>varchar</datatype>
+        <columnTitle>Hasneto:has First Coordinate Characteristic</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasneto:hasSecondCoordinate">
+        <datatype>varchar</datatype>
+        <columnTitle>Hasneto:has Second Coordinate</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasneto:hasSecondCoordinateUnit">
+        <datatype>varchar</datatype>
+        <columnTitle>Hasneto:has Second Coordinate Unit</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <fk>
+          <fkDbSchema>lists</fkDbSchema>
+          <fkTable>Unit</fkTable>
+          <fkColumnName>hasURI</fkColumnName>
+        </fk>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasneto:hasSecondCoordinateCharacteristic">
+        <datatype>varchar</datatype>
+        <columnTitle>Hasneto:has Second Coordinate Characteristic</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasneto:hasThirdCoordinate">
+        <datatype>varchar</datatype>
+        <columnTitle>Hasneto:has Third Coordinate</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasneto:hasThirdCoordinateUnit">
+        <datatype>varchar</datatype>
+        <columnTitle>Hasneto:has Third Coordinate Unit</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <fk>
+          <fkDbSchema>lists</fkDbSchema>
+          <fkTable>Unit</fkTable>
+          <fkColumnName>hasURI</fkColumnName>
+        </fk>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasneto:hasThirdCoordinateCharacteristic">
+        <datatype>varchar</datatype>
+        <columnTitle>Hasneto:has Third Coordinate Characteristic</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+    </columns>
+    <pkColumnName>hasURI</pkColumnName>
+  </table>
+  <table tableName="DataSet" tableDbType="TABLE">
+    <description>Data Set Lists as related to Studies</description>
+    <columns>
+      <column columnName="hasURI">
+        <datatype>varchar</datatype>
+        <columnTitle>hasURI</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <nullable>false</nullable>
+        <scale>4000</scale>
+        <isKeyField>true</isKeyField>
+      </column>
+      <column columnName="a">
+        <datatype>varchar</datatype>
+        <columnTitle>a</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="rdfs:label">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:label</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="rdfs:comment">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:comment</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasco:isDatasetOf">
+        <datatype>varchar</datatype>
+        <columnTitle>hasco:isDatasetOf</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <fk>
+          <fkDbSchema>lists</fkDbSchema>
+          <fkTable>Study</fkTable>
+          <fkColumnName>hasURI</fkColumnName>
+        </fk>
+        <scale>4000</scale>
+      </column>
+    </columns>
+    <pkColumnName>hasURI</pkColumnName>
+  </table>
+  <table tableName="DataAcquisitionType" tableDbType="TABLE">
+    <description>General Ontology - Types of Available Data Acquisition Methods</description>
+    <columns>
+      <column columnName="hasURI">
+        <datatype>varchar</datatype>
+        <columnTitle>hasURI</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <nullable>false</nullable>
+        <scale>4000</scale>
+        <isKeyField>true</isKeyField>
+      </column>
+      <column columnName="rdfs:subClassOf">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:subClassOf</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <fk>
+          <fkDbSchema>lists</fkDbSchema>
+          <fkTable>DataAcquisitionType</fkTable>
+          <fkColumnName>hasURI</fkColumnName>
+        </fk>
+        <scale>4000</scale>
+      </column>
+      <column columnName="rdfs:label">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:label</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+    </columns>
+    <pkColumnName>hasURI</pkColumnName>
+  </table>
+  <table tableName="SensingPerspectiveType" tableDbType="TABLE">
+    <description>General Ontology</description>
+    <columns>
+      <column columnName="hasURI">
+        <datatype>varchar</datatype>
+        <columnTitle>Has URI</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <nullable>false</nullable>
+        <scale>4000</scale>
+        <isKeyField>true</isKeyField>
+      </column>
+      <column columnName="rdfs:subClassOf">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:subClassOf</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="vstoi:perspectiveOf">
+        <datatype>varchar</datatype>
+        <columnTitle>Vstoi:perspective Of</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasneto:hasPerspectiveAntity">
+        <datatype>varchar</datatype>
+        <columnTitle>hasneto:hasPerspectiveEntity</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <fk>
+          <fkDbSchema>lists</fkDbSchema>
+          <fkTable>LocalObjectType</fkTable>
+          <fkColumnName>hasURI</fkColumnName>
+        </fk>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasneto:hasPerspectiveCharacteristic">
+        <datatype>varchar</datatype>
+        <columnTitle>Hasneto:has Perspective Characteristic</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <fk>
+          <fkDbSchema>lists</fkDbSchema>
+          <fkTable>LocalAttributeType</fkTable>
+          <fkColumnName>hasURI</fkColumnName>
+        </fk>
+        <scale>4000</scale>
+      </column>
+      <column columnName="vstoi:hasAccuracyPercentage">
+        <datatype>varchar</datatype>
+        <columnTitle>Vstoi:has Accuracy Percentage</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="vstoi:hasAccuracyR2">
+        <datatype>varchar</datatype>
+        <columnTitle>Vstoi:has Accuracy R2</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="vstoi:hasOutputResolution">
+        <datatype>varchar</datatype>
+        <columnTitle>Vstoi:has Output Resolution</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="vstoi:hasMaxResponseTimeValue">
+        <datatype>varchar</datatype>
+        <columnTitle>Vstoi:has Max Response Time Value</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasneto:hasResponseTimeUnit">
+        <datatype>varchar</datatype>
+        <columnTitle>Hasneto:has Response Time Unit</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="vstoi:hasLowRangeValue">
+        <datatype>varchar</datatype>
+        <columnTitle>Vstoi:has Low Range Value</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="vstoi:hasHighRangeValue">
+        <datatype>varchar</datatype>
+        <columnTitle>Vstoi:has High Range Value</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+    </columns>
+    <pkColumnName>hasURI</pkColumnName>
+  </table>
+  <table tableName="InstrumentType" tableDbType="TABLE">
+    <description>General ontology</description>
+    <columns>
+      <column columnName="hasURI">
+        <datatype>varchar</datatype>
+        <columnTitle>hasURI</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <nullable>false</nullable>
+        <scale>4000</scale>
+        <isKeyField>true</isKeyField>
+      </column>
+      <column columnName="rdfs:subClassOf">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:subClassOf</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <fk>
+          <fkDbSchema>lists</fkDbSchema>
+          <fkTable>InstrumentType</fkTable>
+          <fkColumnName>hasURI</fkColumnName>
+        </fk>
+        <scale>4000</scale>
+      </column>
+      <column columnName="rdfs:label">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:label</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="rdfs:comment">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:comment</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+    </columns>
+    <pkColumnName>hasURI</pkColumnName>
+  </table>
+  <table tableName="Deployment" tableDbType="TABLE">
+    <description>Deployment and Location of Data Acquisition as related to Studies</description>
+    <columns>
+      <column columnName="hasURI">
+        <datatype>varchar</datatype>
+        <columnTitle>hasURI</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <nullable>false</nullable>
+        <scale>4000</scale>
+        <isKeyField>true</isKeyField>
+      </column>
+      <column columnName="a">
+        <datatype>varchar</datatype>
+        <columnTitle>a</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="vstoi:hasPlatform">
+        <datatype>varchar</datatype>
+        <columnTitle>vstoi:hasPlatform</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <fk>
+          <fkDbSchema>lists</fkDbSchema>
+          <fkTable>Platform</fkTable>
+          <fkColumnName>hasURI</fkColumnName>
+        </fk>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasneto:hasInstrument">
+        <datatype>varchar</datatype>
+        <columnTitle>hasneto:hasInstrument</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <fk>
+          <fkDbSchema>lists</fkDbSchema>
+          <fkTable>Instrument</fkTable>
+          <fkColumnName>hasURI</fkColumnName>
+        </fk>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasneto:hasDetector">
+        <datatype>varchar</datatype>
+        <columnTitle>hasneto:hasDetector</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="prov:startedAtTime">
+        <datatype>varchar</datatype>
+        <columnTitle>prov:startedAtTime</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="prov:endedAtTime">
+        <datatype>varchar</datatype>
+        <columnTitle>prov:endedAtTime</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="vstoi:subDeploymentOf">
+        <datatype>varchar</datatype>
+        <columnTitle>vstoi:subDeploymentOf</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+    </columns>
+    <pkColumnName>hasURI</pkColumnName>
+  </table>
+  <table tableName="Unit" tableDbType="TABLE">
+    <description>General Ontology</description>
+    <columns>
+      <column columnName="hasURI">
+        <datatype>varchar</datatype>
+        <columnTitle>Has URI</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <nullable>false</nullable>
+        <scale>4000</scale>
+        <isKeyField>true</isKeyField>
+      </column>
+      <column columnName="rdfs:subClassOf">
+        <datatype>varchar</datatype>
+        <columnTitle>Rdfs:sub Class Of</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="rdfs:label">
+        <datatype>varchar</datatype>
+        <columnTitle>Rdfs:label</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="obo:IAO_0000115">
+        <datatype>varchar</datatype>
+        <columnTitle>obo:IAO_0000115</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+    </columns>
+    <pkColumnName>hasURI</pkColumnName>
+  </table>
+  <table tableName="LocalPlatformType" tableDbType="TABLE">
+    <description>Local Ontology</description>
+    <columns>
+      <column columnName="hasURI">
+        <datatype>varchar</datatype>
+        <columnTitle>hasURI</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <nullable>false</nullable>
+        <scale>4000</scale>
+        <isKeyField>true</isKeyField>
+      </column>
+      <column columnName="rdfs:subClassOf">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:subClassOf</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <fk>
+          <fkDbSchema>lists</fkDbSchema>
+          <fkTable>PlatformType</fkTable>
+          <fkColumnName>hasURI</fkColumnName>
+        </fk>
+        <scale>4000</scale>
+      </column>
+      <column columnName="rdfs:label">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:label</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="rdfs:comment">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:comment</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasneto:hasMaker">
+        <datatype>varchar</datatype>
+        <columnTitle>hasneto:hasMaker</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasneto:hasImage">
+        <datatype>varchar</datatype>
+        <columnTitle>hasneto:hasImage</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="vstoi:hasWebDocumentation">
+        <datatype>varchar</datatype>
+        <columnTitle>vstoi:hasWebDocumentation</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="prov:wasGeneratedBy">
+        <datatype>varchar</datatype>
+        <columnTitle>prov:wasGeneratedBy</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="skos:editorialNote">
+        <datatype>varchar</datatype>
+        <columnTitle>skos:editorialNote</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasco:needsApproval">
+        <datatype>boolean</datatype>
+        <columnTitle>hasco:needsApproval</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#boolean</rangeURI>
+      </column>
+      <column columnName="hasco:approvedBy">
+        <datatype>varchar</datatype>
+        <columnTitle>hasco:approvedBy</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <fk>
+          <fkDbSchema>lists</fkDbSchema>
+          <fkTable>Agent</fkTable>
+          <fkColumnName>hasURI</fkColumnName>
+        </fk>
+        <scale>4000</scale>
+      </column>
+    </columns>
+    <pkColumnName>hasURI</pkColumnName>
+  </table>
+  <table tableName="ObjectType" tableDbType="TABLE">
+    <description>General Ontology</description>
+    <columns>
+      <column columnName="hasURI">
+        <datatype>varchar</datatype>
+        <columnTitle>Has URI</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <nullable>false</nullable>
+        <scale>4000</scale>
+        <isKeyField>true</isKeyField>
+      </column>
+      <column columnName="rdfs:subClassOf">
+        <datatype>varchar</datatype>
+        <columnTitle>Rdfs:sub Class Of</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="rdfs:label">
+        <datatype>varchar</datatype>
+        <columnTitle>Rdfs:label</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+    </columns>
+    <pkColumnName>hasURI</pkColumnName>
+  </table>
+  <table tableName="IndicatorType" tableDbType="TABLE">
+    <description>Local Ontology - Standard Set of Indicator Superclasses</description>
+    <columns>
+      <column columnName="hasURI">
+        <datatype>varchar</datatype>
+        <columnTitle>hasURI</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <nullable>false</nullable>
+        <scale>4000</scale>
+        <isKeyField>true</isKeyField>
+      </column>
+      <column columnName="rdfs:subClassOf">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:subClassOf</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="rdfs:label">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:label</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="rdfs:comment">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:comment</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="prov:wasGeneratedBy">
+        <datatype>varchar</datatype>
+        <columnTitle>prov:wasGeneratedBy</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="skos:editorialNote">
+        <datatype>varchar</datatype>
+        <columnTitle>skos:editorialNote</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasco:needsApproval">
+        <datatype>boolean</datatype>
+        <columnTitle>hasco:needsApproval</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#boolean</rangeURI>
+      </column>
+      <column columnName="hasco:approvedBy">
+        <datatype>varchar</datatype>
+        <columnTitle>hasco:approvedBy</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <dimension>false</dimension>
+        <fk>
+          <fkDbSchema>lists</fkDbSchema>
+          <fkTable>Agent</fkTable>
+          <fkColumnName>hasURI</fkColumnName>
+        </fk>
+        <scale>4000</scale>
+      </column>
+    </columns>
+    <pkColumnName>hasURI</pkColumnName>
+  </table>
+  <table tableName="AttributeType" tableDbType="TABLE">
+    <description>Standard Set of Attribute Types</description>
+    <columns>
+      <column columnName="hasURI">
+        <datatype>varchar</datatype>
+        <columnTitle>hasURI</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <nullable>false</nullable>
+        <scale>4000</scale>
+        <isKeyField>true</isKeyField>
+      </column>
+      <column columnName="rdfs:subClassOf">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:subClassOf</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="rdfs:label">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:label</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="rdfs:comment">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:comment</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasneto:hasUnit">
+        <datatype>varchar</datatype>
+        <columnTitle>hasneto:hasUnit</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+    </columns>
+    <pkColumnName>hasURI</pkColumnName>
+  </table>
+  <table tableName="LocalMethodType" tableDbType="TABLE">
+    <description>Local Ontology</description>
+    <columns>
+      <column columnName="hasURI">
+        <datatype>varchar</datatype>
+        <columnTitle>hasURI</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <nullable>false</nullable>
+        <scale>4000</scale>
+        <isKeyField>true</isKeyField>
+      </column>
+      <column columnName="rdfs:subClassOf">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:subClassOf</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="rdfs:label">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:label</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="rdfs:comment">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:comment</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="prov:wasGeneratedBy">
+        <datatype>varchar</datatype>
+        <columnTitle>prov:wasGeneratedBy</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="skos:editorialNote">
+        <datatype>varchar</datatype>
+        <columnTitle>skos:editorialNote</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasco:needsApproval">
+        <datatype>boolean</datatype>
+        <columnTitle>hasco:needsApproval</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#boolean</rangeURI>
+      </column>
+      <column columnName="hasco:approvedBy">
+        <datatype>varchar</datatype>
+        <columnTitle>hasco:approvedBy</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <fk>
+          <fkDbSchema>lists</fkDbSchema>
+          <fkTable>Agent</fkTable>
+          <fkColumnName>hasURI</fkColumnName>
+        </fk>
+        <scale>4000</scale>
+      </column>
+    </columns>
+    <pkColumnName>hasURI</pkColumnName>
+  </table>
+  <table tableName="LocalScaleType" tableDbType="TABLE">
+    <description>Local Ontology</description>
+    <columns>
+      <column columnName="hasURI">
+        <datatype>varchar</datatype>
+        <columnTitle>hasURI</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <nullable>false</nullable>
+        <scale>4000</scale>
+        <isKeyField>true</isKeyField>
+      </column>
+      <column columnName="rdfs:subClassOf">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:subClassOf</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="rdfs:label">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:label</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="rdfs:comment">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:comment</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="prov:wasGeneratedBy">
+        <datatype>varchar</datatype>
+        <columnTitle>prov:wasGeneratedBy</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="skos:editorialNote">
+        <datatype>varchar</datatype>
+        <columnTitle>skos:editorialNote</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasco:needsApproval">
+        <datatype>boolean</datatype>
+        <columnTitle>hasco:needsApproval</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#boolean</rangeURI>
+      </column>
+      <column columnName="hasco:approvedBy">
+        <datatype>varchar</datatype>
+        <columnTitle>hasco:approvedBy</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <fk>
+          <fkDbSchema>lists</fkDbSchema>
+          <fkTable>Agent</fkTable>
+          <fkColumnName>hasURI</fkColumnName>
+        </fk>
+        <scale>4000</scale>
+      </column>
+    </columns>
+    <pkColumnName>hasURI</pkColumnName>
+  </table>
+  <table tableName="LocalInstrumentPerspectiveType" tableDbType="TABLE">
+    <description>Local Ontology</description>
+    <columns>
+      <column columnName="hasURI">
+        <datatype>varchar</datatype>
+        <columnTitle>hasURI</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <nullable>false</nullable>
+        <scale>4000</scale>
+        <isKeyField>true</isKeyField>
+      </column>
+      <column columnName="rdfs:subClassOf">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:subClassOf</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="vstoi:perspectiveOf">
+        <datatype>varchar</datatype>
+        <columnTitle>vstoi:perspectiveOf</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasneto:hasPerspectiveEntity">
+        <datatype>varchar</datatype>
+        <columnTitle>hasneto:hasPerspectiveEntity</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasneto:hasPerspectiveCharacteristic">
+        <datatype>varchar</datatype>
+        <columnTitle>hasneto:hasPerspectiveCharacteristic</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <fk>
+          <fkDbSchema>lists</fkDbSchema>
+          <fkTable>LocalAttributeType</fkTable>
+          <fkColumnName>hasURI</fkColumnName>
+        </fk>
+        <scale>4000</scale>
+      </column>
+      <column columnName="vstoi:hasOutputResolution">
+        <datatype>varchar</datatype>
+        <columnTitle>vstoi:hasOutputResolution</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="vstoi:hasMaxResponseTimeValue">
+        <datatype>varchar</datatype>
+        <columnTitle>vstoi:hasMaxResponseTimeValue</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasneto:hasResponseTimeUnit">
+        <datatype>varchar</datatype>
+        <columnTitle>hasneto:hasResponseTimeUnit</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="vstoi:hasLowRangeValue">
+        <datatype>varchar</datatype>
+        <columnTitle>vstoi:hasLowRangeValue</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="vstoi:hasHighRangeValue">
+        <datatype>varchar</datatype>
+        <columnTitle>vstoi:hasHighRangeValue</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="prov:wasGeneratedBy">
+        <datatype>varchar</datatype>
+        <columnTitle>prov:wasGeneratedBy</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="skos:editorialNote">
+        <datatype>varchar</datatype>
+        <columnTitle>skos:editorialNote</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasco:needsApproval">
+        <datatype>boolean</datatype>
+        <columnTitle>hasco:needsApproval</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#boolean</rangeURI>
+      </column>
+      <column columnName="hasco:approvedBy">
+        <datatype>varchar</datatype>
+        <columnTitle>hasco:approvedBy</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <fk>
+          <fkDbSchema>lists</fkDbSchema>
+          <fkTable>Agent</fkTable>
+          <fkColumnName>hasURI</fkColumnName>
+        </fk>
+        <scale>4000</scale>
+      </column>
+    </columns>
+    <pkColumnName>hasURI</pkColumnName>
+  </table>
+  <table tableName="LocalSensingPerspectiveType" tableDbType="TABLE">
+    <description>Local Ontology</description>
+    <columns>
+      <column columnName="hasURI">
+        <datatype>varchar</datatype>
+        <columnTitle>hasURI</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <nullable>false</nullable>
+        <scale>4000</scale>
+        <isKeyField>true</isKeyField>
+      </column>
+      <column columnName="rdfs:subClassOf">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:subClassOf</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="vstoi:perspectiveOf">
+        <datatype>varchar</datatype>
+        <columnTitle>vstoi:perspectiveOf</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasneto:hasPerspectiveAntity">
+        <datatype>varchar</datatype>
+        <columnTitle>hasneto:hasPerspectiveAntity</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <fk>
+          <fkDbSchema>lists</fkDbSchema>
+          <fkTable>LocalObjectType</fkTable>
+          <fkColumnName>hasURI</fkColumnName>
+        </fk>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasneto:hasPerspectiveCharacteristic">
+        <datatype>varchar</datatype>
+        <columnTitle>hasneto:hasPerspectiveCharacteristic</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <fk>
+          <fkDbSchema>lists</fkDbSchema>
+          <fkTable>LocalAttributeType</fkTable>
+          <fkColumnName>hasURI</fkColumnName>
+        </fk>
+        <scale>4000</scale>
+      </column>
+      <column columnName="vstoi:hasAccuracyPercentage">
+        <datatype>varchar</datatype>
+        <columnTitle>vstoi:hasAccuracyPercentage</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="vstoi:hasAccuracyR2">
+        <datatype>varchar</datatype>
+        <columnTitle>vstoi:hasAccuracyR2</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="vstoi:hasOutputResolution">
+        <datatype>varchar</datatype>
+        <columnTitle>vstoi:hasOutputResolution</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="vstoi:hasMaxResponseTimeValue">
+        <datatype>varchar</datatype>
+        <columnTitle>vstoi:hasMaxResponseTimeValue</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasneto:hasResponseTimeUnit">
+        <datatype>varchar</datatype>
+        <columnTitle>hasneto:hasResponseTimeUnit</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="vstoi:hasLowRangeValue">
+        <datatype>varchar</datatype>
+        <columnTitle>vstoi:hasLowRangeValue</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="vstoi:hasHighRangeValue">
+        <datatype>varchar</datatype>
+        <columnTitle>vstoi:hasHighRangeValue</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="prov:wasGeneratedBy">
+        <datatype>varchar</datatype>
+        <columnTitle>prov:wasGeneratedBy</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="skos:editorialNote">
+        <datatype>varchar</datatype>
+        <columnTitle>skos:editorialNote</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasco:needsApproval">
+        <datatype>boolean</datatype>
+        <columnTitle>hasco:needsApproval</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#boolean</rangeURI>
+      </column>
+      <column columnName="hasco:approvedBy">
+        <datatype>varchar</datatype>
+        <columnTitle>hasco:approvedBy</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <fk>
+          <fkDbSchema>lists</fkDbSchema>
+          <fkTable>Agent</fkTable>
+          <fkColumnName>hasURI</fkColumnName>
+        </fk>
+        <scale>4000</scale>
+      </column>
+    </columns>
+    <pkColumnName>hasURI</pkColumnName>
+  </table>
+  <table tableName="Study" tableDbType="TABLE">
+    <columns>
+      <column columnName="hasURI">
+        <datatype>varchar</datatype>
+        <columnTitle>hasURI</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <nullable>false</nullable>
+        <scale>4000</scale>
+        <isKeyField>true</isKeyField>
+      </column>
+      <column columnName="rdfs:type">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:type</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <fk>
+          <fkDbSchema>lists</fkDbSchema>
+          <fkTable>StudyType</fkTable>
+          <fkColumnName>hasURI</fkColumnName>
+        </fk>
+        <scale>4000</scale>
+      </column>
+      <column columnName="rdfs:label">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:label</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="chear-kb:project">
+        <datatype>varchar</datatype>
+        <columnTitle>chear-kb:project</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <fk>
+          <fkDbSchema>lists</fkDbSchema>
+          <fkTable>Project</fkTable>
+          <fkColumnName>hasURI</fkColumnName>
+        </fk>
+        <scale>4000</scale>
+      </column>
+      <column columnName="skos:definition">
+        <datatype>varchar</datatype>
+        <columnTitle>skos:definition</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="rdfs:comment">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:comment</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasco:hasAgent">
+        <datatype>varchar</datatype>
+        <columnTitle>hasco:hasAgent</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasco:hasInstitution">
+        <datatype>varchar</datatype>
+        <columnTitle>hasco:hasInstitution</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <fk>
+          <fkDbSchema>lists</fkDbSchema>
+          <fkTable>Agent</fkTable>
+          <fkColumnName>hasURI</fkColumnName>
+        </fk>
+        <scale>4000</scale>
+      </column>
+    </columns>
+    <pkColumnName>hasURI</pkColumnName>
+  </table>
+  <table tableName="Agent" tableDbType="TABLE">
+    <description>Agents and Organizations involved in the Project</description>
+    <columns>
+      <column columnName="hasURI">
+        <datatype>varchar</datatype>
+        <columnTitle>Has URI</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <nullable>false</nullable>
+        <scale>4000</scale>
+        <isKeyField>true</isKeyField>
+      </column>
+      <column columnName="a">
+        <datatype>varchar</datatype>
+        <columnTitle>A</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <fk>
+          <fkDbSchema>lists</fkDbSchema>
+          <fkTable>AgentType</fkTable>
+          <fkColumnName>hasURI</fkColumnName>
+        </fk>
+        <scale>4000</scale>
+      </column>
+      <column columnName="foaf:name">
+        <datatype>varchar</datatype>
+        <columnTitle>Foaf:name</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="rdfs:comment">
+        <datatype>varchar</datatype>
+        <columnTitle>Rdfs:comment</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="foaf:familyName">
+        <datatype>varchar</datatype>
+        <columnTitle>Foaf:family Name</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="foaf:givenName">
+        <datatype>varchar</datatype>
+        <columnTitle>Foaf:given Name</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="foaf:mbox">
+        <datatype>varchar</datatype>
+        <columnTitle>Foaf:mbox</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="foaf:homepage">
+        <datatype>varchar</datatype>
+        <columnTitle>Foaf:homepage</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="foaf:member">
+        <datatype>varchar</datatype>
+        <columnTitle>Foaf:member</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <fk>
+          <fkDbSchema>lists</fkDbSchema>
+          <fkTable>Agent</fkTable>
+          <fkColumnName>hasURI</fkColumnName>
+        </fk>
+        <scale>4000</scale>
+      </column>
+    </columns>
+    <pkColumnName>hasURI</pkColumnName>
+  </table>
+  <table tableName="DataAcquisition" tableDbType="TABLE">
+    <description>Data Acquisition Method Mappings to DA Schemas</description>
+    <columns>
+      <column columnName="hasURI">
+        <datatype>varchar</datatype>
+        <columnTitle>hasURI</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <nullable>false</nullable>
+        <scale>4000</scale>
+        <isKeyField>true</isKeyField>
+      </column>
+      <column columnName="a">
+        <datatype>varchar</datatype>
+        <columnTitle>a</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <fk>
+          <fkDbSchema>lists</fkDbSchema>
+          <fkTable>DataAcquisitionType</fkTable>
+          <fkColumnName>hasURI</fkColumnName>
+        </fk>
+        <scale>4000</scale>
+      </column>
+      <column columnName="rdfs:label">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:label</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="rdfs:comment">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:comment</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="prov:startedAtTime">
+        <datatype>timestamp</datatype>
+        <columnTitle>prov:startedAtTime</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#dateTime</rangeURI>
+      </column>
+      <column columnName="prov:endedAtTime">
+        <datatype>timestamp</datatype>
+        <columnTitle>prov:endedAtTime</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#dateTime</rangeURI>
+      </column>
+      <column columnName="prov:used">
+        <datatype>varchar</datatype>
+        <columnTitle>prov:used</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="prov:wasAssociatedWith">
+        <datatype>varchar</datatype>
+        <columnTitle>prov:wasAssociatedWith</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <fk>
+          <fkDbSchema>lists</fkDbSchema>
+          <fkTable>Agent</fkTable>
+          <fkColumnName>hasURI</fkColumnName>
+        </fk>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasneto:hasDeployment">
+        <datatype>varchar</datatype>
+        <columnTitle>hasneto:hasDeployment</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <fk>
+          <fkDbSchema>lists</fkDbSchema>
+          <fkTable>Deployment</fkTable>
+          <fkColumnName>hasURI</fkColumnName>
+        </fk>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasco:hasMethod">
+        <datatype>varchar</datatype>
+        <columnTitle>hasco:hasMethod</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <fk>
+          <fkDbSchema>lists</fkDbSchema>
+          <fkTable>Method</fkTable>
+          <fkColumnName>hasURI</fkColumnName>
+        </fk>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasco:isDataAcquisitionOf">
+        <datatype>varchar</datatype>
+        <columnTitle>hasco:isDataAcquisitionOf</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <fk>
+          <fkDbSchema>lists</fkDbSchema>
+          <fkTable>Study</fkTable>
+          <fkColumnName>hasURI</fkColumnName>
+        </fk>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasco:hasSchema">
+        <datatype>varchar</datatype>
+        <columnTitle>hasco:hasSchema</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <fk>
+          <fkDbSchema>lists</fkDbSchema>
+          <fkTable>DASchema</fkTable>
+          <fkColumnName>hasURI</fkColumnName>
+        </fk>
+        <scale>4000</scale>
+      </column>
+    </columns>
+    <pkColumnName>hasURI</pkColumnName>
+  </table>
+  <table tableName="StudyType" tableDbType="TABLE">
+    <description>General Ontology</description>
+    <columns>
+      <column columnName="hasURI">
+        <datatype>varchar</datatype>
+        <columnTitle>hasURI</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <nullable>false</nullable>
+        <scale>4000</scale>
+        <isKeyField>true</isKeyField>
+      </column>
+      <column columnName="rdfs:subClassOf">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:subClassOf</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <fk>
+          <fkDbSchema>lists</fkDbSchema>
+          <fkTable>StudyType</fkTable>
+          <fkColumnName>hasURI</fkColumnName>
+        </fk>
+        <scale>4000</scale>
+      </column>
+      <column columnName="rdfs:label">
+        <datatype>varchar</datatype>
+        <columnTitle>Rdfs:label</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+    </columns>
+    <pkColumnName>hasURI</pkColumnName>
+  </table>
+  <table tableName="Sample" tableDbType="TABLE">
+    <columns>
+      <column columnName="hasURI">
+        <datatype>varchar</datatype>
+        <columnTitle>hasURI</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <nullable>false</nullable>
+        <scale>4000</scale>
+        <isKeyField>true</isKeyField>
+      </column>
+      <column columnName="a">
+        <datatype>varchar</datatype>
+        <columnTitle>a</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <fk>
+          <fkDbSchema>lists</fkDbSchema>
+          <fkTable>LocalSampleType</fkTable>
+          <fkColumnName>hasURI</fkColumnName>
+        </fk>
+        <scale>4000</scale>
+      </column>
+      <column columnName="rdfs:label">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:label</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasco:isSampleOf">
+        <datatype>varchar</datatype>
+        <columnTitle>hasco:isSampleOf</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <fk>
+          <fkDbSchema>lists</fkDbSchema>
+          <fkTable>Subject</fkTable>
+          <fkColumnName>hasURI</fkColumnName>
+        </fk>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasco:isMeasuredObjectOf">
+        <datatype>varchar</datatype>
+        <columnTitle>hasco:isMeasuredObjectOf</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <fk>
+          <fkDbSchema>lists</fkDbSchema>
+          <fkTable>DataAcquisition</fkTable>
+          <fkColumnName>hasURI</fkColumnName>
+        </fk>
+        <scale>4000</scale>
+      </column>
+      <column columnName="rdfs:comment">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:comment</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasco:hasSamplingMehod">
+        <datatype>varchar</datatype>
+        <columnTitle>hasco:hasSamplingMethod</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasco:hasSamplingVolume">
+        <datatype>varchar</datatype>
+        <columnTitle>hasco:hasSamplingVolume</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasco:hasSamplingVolumeUnit">
+        <datatype>varchar</datatype>
+        <columnTitle>hasco:hasSamplingVolumeUnit</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <fk>
+          <fkDbSchema>lists</fkDbSchema>
+          <fkTable>Unit</fkTable>
+          <fkColumnName>hasURI</fkColumnName>
+        </fk>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasco:hasStorageTemperature">
+        <datatype>varchar</datatype>
+        <columnTitle>hasco:hasStorageTemperature</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasco:hasStorageTemperatureUnit">
+        <datatype>varchar</datatype>
+        <columnTitle>hasco:hasStorageTemperatureUnit</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <fk>
+          <fkDbSchema>lists</fkDbSchema>
+          <fkTable>Unit</fkTable>
+          <fkColumnName>hasURI</fkColumnName>
+        </fk>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasco:hasNumFreezeThaw">
+        <datatype>varchar</datatype>
+        <columnTitle>hasco:hasNumFreezeThaw</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+    </columns>
+    <pkColumnName>hasURI</pkColumnName>
+  </table>
+  <table tableName="AttributeReference" tableDbType="TABLE">
+    <description>Direct Import of Pilot Data Dictionaries and initial concept mappings</description>
+    <columns>
+      <column columnName="hasURI">
+        <datatype>varchar</datatype>
+        <columnTitle>Has URI</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <nullable>false</nullable>
+        <scale>4000</scale>
+        <isKeyField>true</isKeyField>
+      </column>
+      <column columnName="a">
+        <datatype>varchar</datatype>
+        <columnTitle>a</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="rdfs:label">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:label</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="rdfs:comment">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:comment</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="prov:used">
+        <datatype>varchar</datatype>
+        <columnTitle>prov:used</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasco:hasReference">
+        <datatype>varchar</datatype>
+        <columnTitle>hasco:hasReference</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasco:isAttributeReferenceOf">
+        <datatype>varchar</datatype>
+        <columnTitle>hasco:isAttributeReferenceOf</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <fk>
+          <fkDbSchema>lists</fkDbSchema>
+          <fkTable>DataSet</fkTable>
+          <fkColumnName>hasURI</fkColumnName>
+        </fk>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasco:hasPosition">
+        <datatype>integer</datatype>
+        <columnTitle>hasco:hasPosition</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#int</rangeURI>
+      </column>
+      <column columnName="hasco:isPIConfirmed">
+        <datatype>varchar</datatype>
+        <columnTitle>hasco:isPIConfirmed</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+    </columns>
+    <pkColumnName>hasURI</pkColumnName>
+  </table>
+  <table tableName="LocalObjectType" tableDbType="TABLE">
+    <description>Local Ontology</description>
+    <columns>
+      <column columnName="hasURI">
+        <datatype>varchar</datatype>
+        <columnTitle>hasURI</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <nullable>false</nullable>
+        <scale>4000</scale>
+        <isKeyField>true</isKeyField>
+      </column>
+      <column columnName="rdfs:subClassOf">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:subClassOf</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="rdfs:label">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:label</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="rdfs:comment">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:comment</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="rdf:type">
+        <datatype>varchar</datatype>
+        <columnTitle>rdf:type</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="prov:wasGeneratedBy">
+        <datatype>varchar</datatype>
+        <columnTitle>prov:wasGeneratedBy</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="skos:editorialNote">
+        <datatype>varchar</datatype>
+        <columnTitle>skos:editorialNote</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasco:needsApproval">
+        <datatype>boolean</datatype>
+        <columnTitle>hasco:needsApproval</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#boolean</rangeURI>
+      </column>
+      <column columnName="hasco:approvedBy">
+        <datatype>varchar</datatype>
+        <columnTitle>hasco:approvedBy</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <fk>
+          <fkDbSchema>lists</fkDbSchema>
+          <fkTable>Agent</fkTable>
+          <fkColumnName>hasURI</fkColumnName>
+        </fk>
+        <scale>4000</scale>
+      </column>
+    </columns>
+    <pkColumnName>hasURI</pkColumnName>
+  </table>
+  <table tableName="LocalInstrumentType" tableDbType="TABLE">
+    <description>Local Ontology</description>
+    <columns>
+      <column columnName="hasURI">
+        <datatype>varchar</datatype>
+        <columnTitle>hasURI</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <nullable>false</nullable>
+        <scale>4000</scale>
+        <isKeyField>true</isKeyField>
+      </column>
+      <column columnName="rdfs:subClassOf">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:subClassOf</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <fk>
+          <fkDbSchema>lists</fkDbSchema>
+          <fkTable>LocalInstrumentType</fkTable>
+          <fkColumnName>hasURI</fkColumnName>
+        </fk>
+        <scale>4000</scale>
+      </column>
+      <column columnName="rdfs:label">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:label</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="rdfs:comment">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:comment</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasneto:hasMaker">
+        <datatype>varchar</datatype>
+        <columnTitle>hasneto:hasMaker</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasneto:hasImage">
+        <datatype>varchar</datatype>
+        <columnTitle>hasneto:hasImage</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="vstoi:numAttachedDetectors">
+        <datatype>varchar</datatype>
+        <columnTitle>vstoi:numAttachedDetectors</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="vstoi:maxDetachableDetectors">
+        <datatype>varchar</datatype>
+        <columnTitle>vstoi:maxDetachableDetectors</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="vstoi:maxLoggedMeasurements">
+        <datatype>varchar</datatype>
+        <columnTitle>vstoi:maxLoggedMeasurements</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="vstoi:minOperatingTemperature">
+        <datatype>varchar</datatype>
+        <columnTitle>vstoi:minOperatingTemperature</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="vstoi:maxOperatingTemperature">
+        <datatype>varchar</datatype>
+        <columnTitle>vstoi:maxOperatingTemperature</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasneto:hasOperatingTemperatureUnit">
+        <datatype>varchar</datatype>
+        <columnTitle>hasneto:hasOperatingTemperatureUnit</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="vstoi:hasWebDocumentation">
+        <datatype>varchar</datatype>
+        <columnTitle>vstoi:hasWebDocumentation</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="prov:wasGeneratedBy">
+        <datatype>varchar</datatype>
+        <columnTitle>prov:wasGeneratedBy</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="skos:editorialNote">
+        <datatype>varchar</datatype>
+        <columnTitle>skos:editorialNote</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasco:needsApproval">
+        <datatype>boolean</datatype>
+        <columnTitle>hasco:needsApproval</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#boolean</rangeURI>
+      </column>
+      <column columnName="hasco:approvedBy">
+        <datatype>varchar</datatype>
+        <columnTitle>hasco:approvedBy</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <fk>
+          <fkDbSchema>lists</fkDbSchema>
+          <fkTable>Agent</fkTable>
+          <fkColumnName>hasURI</fkColumnName>
+        </fk>
+        <scale>4000</scale>
+      </column>
+    </columns>
+    <pkColumnName>hasURI</pkColumnName>
+  </table>
+  <table tableName="Method" tableDbType="TABLE">
+    <description>General Ontology</description>
+    <columns>
+      <column columnName="hasURI">
+        <datatype>varchar</datatype>
+        <columnTitle>hasURI</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <nullable>false</nullable>
+        <scale>4000</scale>
+        <isKeyField>true</isKeyField>
+      </column>
+      <column columnName="rdfs:subClassOf">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:subClassOf</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <fk>
+          <fkDbSchema>lists</fkDbSchema>
+          <fkTable>Method</fkTable>
+          <fkColumnName>hasURI</fkColumnName>
+        </fk>
+        <scale>4000</scale>
+      </column>
+      <column columnName="rdfs:label">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:label</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="rdfs:comment">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:comment</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+    </columns>
+    <pkColumnName>hasURI</pkColumnName>
+  </table>
+  <table tableName="Subject" tableDbType="TABLE">
+    <columns>
+      <column columnName="hasURI">
+        <datatype>varchar</datatype>
+        <columnTitle>hasURI</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <nullable>false</nullable>
+        <scale>4000</scale>
+        <isKeyField>true</isKeyField>
+      </column>
+      <column columnName="a">
+        <datatype>varchar</datatype>
+        <columnTitle>a</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="rdfs:label">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:label</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasco:isSubjectOf">
+        <datatype>varchar</datatype>
+        <columnTitle>hasco:isSubjectOf</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <fk>
+          <fkDbSchema>lists</fkDbSchema>
+          <fkTable>Cohort</fkTable>
+          <fkColumnName>hasURI</fkColumnName>
+        </fk>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasco:isMeasuredObjectOf">
+        <datatype>varchar</datatype>
+        <columnTitle>hasco:isMeasuredObjectOf</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+    </columns>
+    <pkColumnName>hasURI</pkColumnName>
+  </table>
+  <table tableName="LocalStudyIndicatorType" tableDbType="TABLE">
+    <description>Local Ontology - Indicators</description>
+    <columns>
+      <column columnName="hasURI">
+        <datatype>varchar</datatype>
+        <columnTitle>hasURI</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <nullable>false</nullable>
+        <scale>4000</scale>
+        <isKeyField>true</isKeyField>
+      </column>
+      <column columnName="rdfs:subClassOf">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:subClassOf</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="rdfs:label">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:label</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="rdfs:comment">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:comment</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="prov:wasGeneratedBy">
+        <datatype>varchar</datatype>
+        <columnTitle>prov:wasGeneratedBy</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="skos:editorialNote">
+        <datatype>varchar</datatype>
+        <columnTitle>skos:editorialNote</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasco:needsApproval">
+        <datatype>boolean</datatype>
+        <columnTitle>hasco:needsApproval</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#boolean</rangeURI>
+      </column>
+      <column columnName="hasco:approvedBy">
+        <datatype>varchar</datatype>
+        <columnTitle>hasco:approvedBy</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <fk>
+          <fkDbSchema>lists</fkDbSchema>
+          <fkTable>Agent</fkTable>
+          <fkColumnName>hasURI</fkColumnName>
+        </fk>
+        <scale>4000</scale>
+      </column>
+    </columns>
+    <pkColumnName>hasURI</pkColumnName>
+  </table>
+  <table tableName="AgentType" tableDbType="TABLE">
+    <description>Standard Set of Agent Types</description>
+    <columns>
+      <column columnName="hasURI">
+        <datatype>varchar</datatype>
+        <columnTitle>hasURI</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <nullable>false</nullable>
+        <scale>4000</scale>
+        <isKeyField>true</isKeyField>
+      </column>
+      <column columnName="rdfs:subClassOf">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:subClassOf</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="rdfs:label">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:label</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="rdfs;comment">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:comment</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+    </columns>
+    <pkColumnName>hasURI</pkColumnName>
+  </table>
+  <table tableName="LocalSampleType" tableDbType="TABLE">
+    <description>Local Ontology</description>
+    <columns>
+      <column columnName="hasURI">
+        <datatype>varchar</datatype>
+        <columnTitle>hasURI</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <nullable>false</nullable>
+        <scale>4000</scale>
+        <isKeyField>true</isKeyField>
+      </column>
+      <column columnName="rdfs:subClassOf">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:subClassOf</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="rdfs:label">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:label</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="rdfs:comment">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:comment</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="dcterms:identifier">
+        <datatype>varchar</datatype>
+        <columnTitle>dcterms:identifier</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="prov:wasGeneratedBy">
+        <datatype>varchar</datatype>
+        <columnTitle>prov:wasGeneratedBy</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="skos:editorialNote">
+        <datatype>varchar</datatype>
+        <columnTitle>skos:editorialNote</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasco:needsApproval">
+        <datatype>boolean</datatype>
+        <columnTitle>hasco:needsApproval</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#boolean</rangeURI>
+      </column>
+      <column columnName="hasco:approvedBy">
+        <datatype>varchar</datatype>
+        <columnTitle>hasco:approvedBy</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <fk>
+          <fkDbSchema>lists</fkDbSchema>
+          <fkTable>Agent</fkTable>
+          <fkColumnName>hasURI</fkColumnName>
+        </fk>
+        <scale>4000</scale>
+      </column>
+    </columns>
+    <pkColumnName>hasURI</pkColumnName>
+  </table>
+  <table tableName="Project" tableDbType="TABLE">
+    <columns>
+      <column columnName="hasURI">
+        <datatype>varchar</datatype>
+        <columnTitle>hasURI</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <nullable>false</nullable>
+        <scale>4000</scale>
+        <isKeyField>true</isKeyField>
+      </column>
+      <column columnName="rdfs:label">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:label</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="rdfs:comment">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:comment</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+    </columns>
+    <pkColumnName>hasURI</pkColumnName>
+  </table>
+  <table tableName="DetectorType" tableDbType="TABLE">
+    <description>General Ontology - Standard Set of Detector Types</description>
+    <columns>
+      <column columnName="hasURI">
+        <datatype>varchar</datatype>
+        <columnTitle>hasURI</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <nullable>false</nullable>
+        <scale>4000</scale>
+        <isKeyField>true</isKeyField>
+      </column>
+      <column columnName="rdfs:subClassOf">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:subClassOf</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <fk>
+          <fkDbSchema>lists</fkDbSchema>
+          <fkTable>DetectorType</fkTable>
+          <fkColumnName>hasURI</fkColumnName>
+        </fk>
+        <scale>4000</scale>
+      </column>
+      <column columnName="rdfs:label">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:label</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="rdfs:comment">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:comment</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasneto:hasMaker">
+        <datatype>varchar</datatype>
+        <columnTitle>hasneto:hasMaker</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasneto:hasImage">
+        <datatype>varchar</datatype>
+        <columnTitle>hasneto:hasImage</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="vstoi:hasWebDocumentation">
+        <datatype>varchar</datatype>
+        <columnTitle>vstoi:hasWebDocumentation</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+    </columns>
+    <pkColumnName>hasURI</pkColumnName>
+  </table>
+  <table tableName="DASchemaAttribute" tableDbType="TABLE">
+    <description>Data Acquisition Schema Attributes - Mapping of Data Variable Values and Locations to Concepts</description>
+    <columns>
+      <column columnName="hasURI">
+        <datatype>varchar</datatype>
+        <columnTitle>hasURI</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <nullable>false</nullable>
+        <scale>4000</scale>
+        <isKeyField>true</isKeyField>
+      </column>
+      <column columnName="a">
+        <datatype>varchar</datatype>
+        <columnTitle>A</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="rdfs:label">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:label</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="rdfs:comment">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:comment</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasneto:partOfSchema">
+        <datatype>varchar</datatype>
+        <columnTitle>hasneto:partOfSchema</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <fk>
+          <fkDbSchema>lists</fkDbSchema>
+          <fkTable>DASchema</fkTable>
+          <fkColumnName>hasURI</fkColumnName>
+        </fk>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasco:hasPosition">
+        <datatype>integer</datatype>
+        <columnTitle>hasco:hasPosition</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#int</rangeURI>
+      </column>
+      <column columnName="hasneto:hasEntity">
+        <datatype>varchar</datatype>
+        <columnTitle>hasneto:hasEntity</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasneto:hasAttribute">
+        <datatype>varchar</datatype>
+        <columnTitle>hasneto:hasAttribute</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasneto:hasUnit">
+        <datatype>varchar</datatype>
+        <columnTitle>hasneto:hasUnit</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <fk>
+          <fkDbSchema>lists</fkDbSchema>
+          <fkTable>Unit</fkTable>
+          <fkColumnName>hasURI</fkColumnName>
+        </fk>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasco:hasSource">
+        <datatype>varchar</datatype>
+        <columnTitle>hasco:hasSource</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasco:isPIConfirmed">
+        <datatype>boolean</datatype>
+        <columnTitle>hasco:isPIConfirmed</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#boolean</rangeURI>
+      </column>
+    </columns>
+    <pkColumnName>hasURI</pkColumnName>
+  </table>
+  <table tableName="Detector" tableDbType="TABLE">
+    <columns>
+      <column columnName="hasURI">
+        <datatype>varchar</datatype>
+        <columnTitle>hasURI</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <nullable>false</nullable>
+        <scale>4000</scale>
+        <isKeyField>true</isKeyField>
+      </column>
+      <column columnName="a">
+        <datatype>varchar</datatype>
+        <columnTitle>a</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="rdfs:label">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:label</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="vstoi:hasSerialNumber">
+        <datatype>varchar</datatype>
+        <columnTitle>vstoi:hasSerialNumber</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="vstoi:isInstrumentAttachment">
+        <datatype>varchar</datatype>
+        <columnTitle>vstoi:isInstrumentAttachment</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+    </columns>
+    <pkColumnName>hasURI</pkColumnName>
+  </table>
+  <table tableName="Cohort" tableDbType="TABLE">
+    <description>List of Cohorts for Studies</description>
+    <columns>
+      <column columnName="hasURI">
+        <datatype>varchar</datatype>
+        <columnTitle>hasURI</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <nullable>false</nullable>
+        <scale>4000</scale>
+        <isKeyField>true</isKeyField>
+      </column>
+      <column columnName="a">
+        <datatype>varchar</datatype>
+        <columnTitle>a</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="rdfs:label">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:label</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasco:hasSize">
+        <datatype>varchar</datatype>
+        <columnTitle>hasco:hasSize</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasco:isCohortOf">
+        <datatype>varchar</datatype>
+        <columnTitle>hasco:isCohortOf</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <fk>
+          <fkDbSchema>lists</fkDbSchema>
+          <fkTable>Study</fkTable>
+          <fkColumnName>hasURI</fkColumnName>
+        </fk>
+        <scale>4000</scale>
+      </column>
+    </columns>
+    <pkColumnName>hasURI</pkColumnName>
+  </table>
+  <table tableName="LocalAnalyteType" tableDbType="TABLE">
+    <description>Local Ontology</description>
+    <titleColumn>rdfs:label</titleColumn>
+    <columns>
+      <column columnName="hasURI">
+        <datatype>varchar</datatype>
+        <columnTitle>hasURI</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <nullable>false</nullable>
+        <scale>4000</scale>
+        <isKeyField>true</isKeyField>
+      </column>
+      <column columnName="rdfs:subClassOf">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:subClassOf</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="dcterms:identifier">
+        <datatype>varchar</datatype>
+        <columnTitle>dcterms:identifier</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="rdfs:label">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:label</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="skos:definition">
+        <datatype>varchar</datatype>
+        <columnTitle>skos:definition</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="skos:editorialNote">
+        <datatype>varchar</datatype>
+        <columnTitle>skos:editorialNote</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="prov:wasGeneratedBy">
+        <datatype>varchar</datatype>
+        <columnTitle>prov:wasGeneratedBy</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasco:needsApproval">
+        <datatype>boolean</datatype>
+        <columnTitle>hasco:needsApproval</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#boolean</rangeURI>
+      </column>
+      <column columnName="hasco:approvedBy">
+        <datatype>varchar</datatype>
+        <columnTitle>hasco:approvedBy</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <fk>
+          <fkDbSchema>lists</fkDbSchema>
+          <fkTable>Agent</fkTable>
+          <fkColumnName>hasURI</fkColumnName>
+        </fk>
+        <scale>4000</scale>
+      </column>
+    </columns>
+    <pkColumnName>hasURI</pkColumnName>
+  </table>
+  <table tableName="DASchema" tableDbType="TABLE">
+    <description>Data Acquisition Schema List</description>
+    <columns>
+      <column columnName="hasURI">
+        <datatype>varchar</datatype>
+        <columnTitle>hasURI</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <nullable>false</nullable>
+        <scale>4000</scale>
+        <isKeyField>true</isKeyField>
+      </column>
+      <column columnName="A">
+        <datatype>varchar</datatype>
+        <columnTitle>A</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="rdfs:label">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:label</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="rdfs:comment">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:comment</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasco:isSchemaOf">
+        <datatype>varchar</datatype>
+        <columnTitle>hasco:isSchemaOf</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <fk>
+          <fkDbSchema>lists</fkDbSchema>
+          <fkTable>Study</fkTable>
+          <fkColumnName>hasURI</fkColumnName>
+        </fk>
+        <scale>4000</scale>
+      </column>
+    </columns>
+    <pkColumnName>hasURI</pkColumnName>
+  </table>
+  <table tableName="LocalProcessType" tableDbType="TABLE">
+    <description>Local Ontology</description>
+    <columns>
+      <column columnName="hasURI">
+        <datatype>varchar</datatype>
+        <columnTitle>hasURI</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <nullable>false</nullable>
+        <scale>4000</scale>
+        <isKeyField>true</isKeyField>
+      </column>
+      <column columnName="rdfs:subClassOf">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:subClassOf</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="rdfs:label">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:label</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="rdfs:comment">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:comment</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="rdf:type">
+        <datatype>varchar</datatype>
+        <columnTitle>rdf:type</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="prov:wasGeneratedBy">
+        <datatype>varchar</datatype>
+        <columnTitle>prov:wasGeneratedBy</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="skos:editorialNote">
+        <datatype>varchar</datatype>
+        <columnTitle>skos:editorialNote</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasco:needsApproval">
+        <datatype>boolean</datatype>
+        <columnTitle>hasco:needsApproval</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#boolean</rangeURI>
+      </column>
+      <column columnName="hasco:approvedBy">
+        <datatype>varchar</datatype>
+        <columnTitle>hasco:approvedBy</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <fk>
+          <fkDbSchema>lists</fkDbSchema>
+          <fkTable>Agent</fkTable>
+          <fkColumnName>hasURI</fkColumnName>
+        </fk>
+        <scale>4000</scale>
+      </column>
+    </columns>
+    <pkColumnName>hasURI</pkColumnName>
+  </table>
+  <table tableName="Instrument" tableDbType="TABLE">
+    <columns>
+      <column columnName="hasURI">
+        <datatype>varchar</datatype>
+        <columnTitle>hasURI</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <nullable>false</nullable>
+        <scale>4000</scale>
+        <isKeyField>true</isKeyField>
+      </column>
+      <column columnName="a">
+        <datatype>varchar</datatype>
+        <columnTitle>a</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="rdfs:label">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:label</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="vstoi:hasSerialNumber">
+        <datatype>varchar</datatype>
+        <columnTitle>vstoi:hasSerialNumber</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+    </columns>
+    <pkColumnName>hasURI</pkColumnName>
+  </table>
+  <table tableName="LocalAttributeType" tableDbType="TABLE">
+    <description>Local Ontology</description>
+    <columns>
+      <column columnName="hasURI">
+        <datatype>varchar</datatype>
+        <columnTitle>hasURI</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <nullable>false</nullable>
+        <scale>4000</scale>
+        <isKeyField>true</isKeyField>
+      </column>
+      <column columnName="rdfs:subClassOf">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:subClassOf</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="rdfs:label">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:label</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="rdfs:comment">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:comment</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasneto:hasUnit">
+        <datatype>varchar</datatype>
+        <columnTitle>hasneto:hasUnit</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <fk>
+          <fkDbSchema>lists</fkDbSchema>
+          <fkTable>Unit</fkTable>
+          <fkColumnName>hasURI</fkColumnName>
+        </fk>
+        <scale>4000</scale>
+      </column>
+      <column columnName="dcterms:identifier">
+        <datatype>varchar</datatype>
+        <columnTitle>dcterms:identifier</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="rdf:type">
+        <datatype>varchar</datatype>
+        <columnTitle>rdf:type</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="prov:wasGeneratedBy">
+        <datatype>varchar</datatype>
+        <columnTitle>prov:wasGeneratedBy</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="skos:editorialNote">
+        <datatype>varchar</datatype>
+        <columnTitle>skos:editorialNote</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasco:needsApproval">
+        <datatype>boolean</datatype>
+        <columnTitle>hasco:needsApproval</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#boolean</rangeURI>
+      </column>
+      <column columnName="hasco:approvedBy">
+        <datatype>varchar</datatype>
+        <columnTitle>hasco:approvedBy</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <fk>
+          <fkDbSchema>lists</fkDbSchema>
+          <fkTable>Agent</fkTable>
+          <fkColumnName>hasURI</fkColumnName>
+        </fk>
+        <scale>4000</scale>
+      </column>
+    </columns>
+    <pkColumnName>hasURI</pkColumnName>
+  </table>
+  <table tableName="ModelType" tableDbType="TABLE">
+    <description>General Ontology</description>
+    <columns>
+      <column columnName="hasURI">
+        <datatype>varchar</datatype>
+        <columnTitle>hasURI</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <nullable>false</nullable>
+        <scale>4000</scale>
+        <isKeyField>true</isKeyField>
+      </column>
+      <column columnName="rdfs:subClassOf">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:subClassOf</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="rdfs:label">
+        <datatype>varchar</datatype>
+        <columnTitle>rdfs:label</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+    </columns>
+    <pkColumnName>hasURI</pkColumnName>
+  </table>
+  <table tableName="PossibleValue" tableDbType="TABLE">
+    <columns>
+      <column columnName="hasURI">
+        <datatype>varchar</datatype>
+        <columnTitle>Has URI</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <nullable>false</nullable>
+        <scale>4000</scale>
+        <isKeyField>true</isKeyField>
+      </column>
+      <column columnName="a">
+        <datatype>varchar</datatype>
+        <columnTitle>A</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasco:hasCode">
+        <datatype>varchar</datatype>
+        <columnTitle>Hasco:has Code</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasco:hasCodeValue">
+        <datatype>varchar</datatype>
+        <columnTitle>Hasco:has Code Value</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasco:isPossibleValueOf">
+        <datatype>varchar</datatype>
+        <columnTitle>Hasco:is Possible Value Of</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+    </columns>
+    <pkColumnName>hasURI</pkColumnName>
+  </table>
+  <table tableName="PlatformType" tableDbType="TABLE">
+    <description>General Ontology</description>
+    <columns>
+      <column columnName="hasURI">
+        <datatype>varchar</datatype>
+        <columnTitle>Has URI</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <nullable>false</nullable>
+        <scale>4000</scale>
+        <isKeyField>true</isKeyField>
+      </column>
+      <column columnName="rdfs:subClassOf">
+        <datatype>varchar</datatype>
+        <columnTitle>Rdfs:sub Class Of</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="rdfs:label">
+        <datatype>varchar</datatype>
+        <columnTitle>Rdfs:label</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasneto:hasMaker">
+        <datatype>varchar</datatype>
+        <columnTitle>Hasneto:has Maker</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="rdfs:comment">
+        <datatype>varchar</datatype>
+        <columnTitle>Rdfs:comment</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="hasneto:hasImage">
+        <datatype>varchar</datatype>
+        <columnTitle>Hasneto:has Image</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="vstoi:hasWebDocumentation">
+        <datatype>varchar</datatype>
+        <columnTitle>Vstoi:has Web Documentation</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+    </columns>
+    <pkColumnName>hasURI</pkColumnName>
+  </table>
+  <table tableName="SampleType" tableDbType="TABLE">
+    <description>General Ontology</description>
+    <columns>
+      <column columnName="hasURI">
+        <datatype>varchar</datatype>
+        <columnTitle>Has URI</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <nullable>false</nullable>
+        <scale>4000</scale>
+        <isKeyField>true</isKeyField>
+      </column>
+      <column columnName="rdfs:subClassOf">
+        <datatype>varchar</datatype>
+        <columnTitle>Rdfs:sub Class Of</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <fk>
+          <fkDbSchema>lists</fkDbSchema>
+          <fkTable>SampleType</fkTable>
+          <fkColumnName>hasURI</fkColumnName>
+        </fk>
+        <scale>4000</scale>
+      </column>
+      <column columnName="rdfs:label">
+        <datatype>varchar</datatype>
+        <columnTitle>Rdfs:label</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+      <column columnName="dct:description">
+        <datatype>varchar</datatype>
+        <columnTitle>dct:description</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <scale>4000</scale>
+      </column>
+    </columns>
+    <pkColumnName>hasURI</pkColumnName>
+  </table>
+</tables>
